@@ -5,80 +5,79 @@
   <meta charset="UTF-8">
   <title>News for You!</title>
   <style>
-    body {
-      background-image: url("https://c4.wallpaperflare.com/wallpaper/702/819/592/white-background-dents-bumps-wallpaper-preview.jpg");
+    body {background-image: url("https://i.pinimg.com/originals/a6/7c/45/a67c455397b93a2b72d1e3b83303ac72.jpg");}
+    h1{ font-family: 'Cinzel', serif;}
+    .jumbotron{
+      font-family: 'Cinzel', serif;
+      text-align: center;
+      color: aliceblue;
+      background-image: url("http://www.omerta-group.com/wp-content/uploads/2014/04/TOG_globalnetwork_map.jpg");
     }
-
-    #wrapper {
-      width: 960px;
+    #wrapper {width: 960px;
       margin-left: auto;
       margin-right: auto;
       padding-top: 5%;
     }
-
-    #articles {
-      display: inline-block;
+    #articles {display: inline-block;
       overflow: auto;
       width: 60%;
       height: 700px;
+      font-family: 'Times New Roman', Times, serif;
     }
-
-    #notes {
-      float: right;
+    #notes { float: right;
       width: 30%;
+      font-family: 'Times New Roman', Times, serif;
     }
-
-    textarea,
-    input {
-      display: block;
+    textarea,input { display: block;
       width: 100%;
-      background-color: #FCF5C7;
+      background-color: rgb(51, 61, 71);
+      color:white;
     }
-
-    input {
-      height: 36px;
+    input {height: 36px;
       font-size: 24px;
     }
-
-    textarea {
-      height: 200px;
+    textarea {height: 200px;
       font-size: 18px;
     }
   </style>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Anaheim&family=Cinzel&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <!-- nav start -->
   <nav class="navbar navbar-light bg-dark">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
       <img src="https://media.giphy.com/media/MF1AuqT4AHGhDu6ffR/giphy.gif" width="30" height="30" alt="">
     </a>
+    <a href="/scrape" class="btn btn-warning" id="scrape">Scrape for Articles</a>
   </nav> <!-- end of nav -->
 
   <div class="jumbotron jumbotron-fluid"><!-- start of jumbotron-->
     <div class="container">
-      <h1 class="display-4">News for You!</h1>
-      <p class="lead">Take a look at the lastest news and leave a comment!</p>
+      <h1 class="display-4">Mongo Scraper</h1>
+      <p class="lead">Take a look at the lastest news and leave a Note.</p>
     </div>
   </div><!-- end of jumbotron-->
 
-  <div id="wrapper">
-    <h1>Note Scraper</h1>
-    <h2><i>If you can do this...the homework should be no problem.</i></h2>
-    <div id="articles"></div>
-    <div id="notes"></div>
-  </div>
+  <!-- card -->
+  <div class="container">
+
+  <div class="card">
+    <h1 class="card-header">
+      Articles
+    </h1>
+
+      <div class="card-body">
+        <div class="card-text" id="articles"></div>
+        <div id="notes"></div>
+      </div>
+
+    </div>
+
+    </div>
 
   <!-- script-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

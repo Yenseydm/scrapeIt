@@ -10,14 +10,12 @@ var cheerio = require("cheerio");
 
 // Require all models
 var db = require("./models");
-
 var PORT = 3000;
 
 // Initialize Express
 var app = express();
 
 // Configure middleware
-
 // Use morgan logger for logging requests
 app.use(logger("dev"));
 // Parse request body as JSON
@@ -30,7 +28,6 @@ app.use(express.static("public"));
 mongoose.connect("mongodb://localhost/unit18Populater", { useNewUrlParser: true });
 
 // Routes
-
 // A GET route for scraping the echoJS website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with axios
@@ -65,7 +62,7 @@ app.get("/scrape", function(req, res) {
     });
 
     // Send a message to the client
-    res.send("Scrape Complete");
+    res.send("Scrape Completed");
   });
 });
 

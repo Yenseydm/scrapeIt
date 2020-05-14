@@ -11,7 +11,11 @@ allow you to read the complete article and leave a note [Demo](https://scrapeit-
 * HTML
 * CSS
 * Mongodb
+* Mongoose
 * express
+* express-handlebars
+* cheerio
+* axios
 
 ## Authors
 
